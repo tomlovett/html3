@@ -41,7 +41,6 @@ a {
 
 .img_container img {
 	width: 100%;
-	height: 100%;
 }
 
 /*CONTENT*/
@@ -75,9 +74,12 @@ p {
 }
 
 /*RESPONSIVE DESIGN*/
+
+/*Adjusting Navbar and Main Image*/
 @media all and (max-width: 635px) {
 	.navbar {
-		max-width: 300px;
+		width: 65%;
+		min-width: 125px;
 	}
 	a {
 		vertical-align: middle;
@@ -88,24 +90,34 @@ p {
 
 	.img_container {
 		float: none;
-		margin: none;
+		margin: 2% 0px 0px 0px;
 		max-width: 400px;
-		width: 80%;
-	}
-}
-
-/*GALLERY*/
-/*gallery-specific formatting*/
-@media screen and (max-width: 1075px) {
-	.gallery {
-		width: 80%;
+		width: 70%;
 	}
 
 	.gallery img {
-		width: 20%;
-		margin: auto;
+		display: inline-block;
+		max-width: 175px;
+		width: 100%;
 	}
+}
 
+/*Gallery-driven break points*/
+/*shrinking 4x1*/
+@media screen and (max-width: 1070px) {
+
+}
+
+/*2x2 break point*/
+@media screen and (max-width: 800px) {
+	.gallery img {
+		width: 40%;
+		max-width: 175px;
+		margin: 2% 5%;
+	}
+}
+
+/*1x4 break point*/
 @media screen and (max-width: 480px) {
 	.gallery img {
 		display: inline-block;
