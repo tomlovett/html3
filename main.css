@@ -1,6 +1,6 @@
 /*Default styles first and then media queries*/
 body {
-	background-color: #ffff00;
+	background-color: #0000ff;
 	text-align: center;
 }
 
@@ -21,7 +21,6 @@ a {
 	text-decoration: none;
 	color: lightgreen;
 	display: inline-block;
-	vertical-align: middle;
 	font-style: italic;
 	font-size: 1.2em;
 	margin: 1% 1.5%;
@@ -29,12 +28,11 @@ a {
 
 /*MAIN IMAGE*/
 /*			*/
-/*			*/
 .img_container {
 	display: inline-block;
 	min-width: 200px;
 	width: 30%;
-	max-width: 600px;
+	max-width: 400px;
 	margin: 2.5% .5% 2.5% 7.5%;
 	float: left;
 }
@@ -53,7 +51,7 @@ a {
 }
 
 p {
-	color: #3fff00;
+	color: #ff6600;
 	text-align: initial;
 	padding: 0px 2%;
 }
@@ -69,30 +67,25 @@ p {
 
 .gallery img {
 	display: inline-block;
-	text-align: center;
 	margin: 2% 1%;
+	width: 20%;
+	max-width: 200px;
 }
 
 /*RESPONSIVE DESIGN*/
 
-/*Adjusting Navbar and Main Image*/
-@media all and (max-width: 635px) {
+/*First break point*/
+/*gallery from 4x1 to 2x2 and Main Image*/
+@media all and (max-width: 650px) {
 	.navbar {
-		width: 65%;
-		min-width: 125px;
-	}
-	a {
-		vertical-align: middle;
-		display: block;
-		width: 100%;
-		padding: 3% none;
+		width: 270px;
 	}
 
 	.img_container {
 		float: none;
 		margin: 2% 0px 0px 0px;
-		max-width: 400px;
-		width: 70%;
+		max-width: 300px;
+		width: 60%;
 	}
 
 	.gallery img {
@@ -102,25 +95,20 @@ p {
 	}
 }
 
-/*Gallery-driven break points*/
-/*shrinking 4x1*/
-@media screen and (max-width: 1070px) {
-
-}
-
-/*2x2 break point*/
-@media screen and (max-width: 800px) {
-	.gallery img {
-		width: 40%;
-		max-width: 175px;
-		margin: 2% 5%;
-	}
-}
-
-/*1x4 break point*/
+/*Second break point*/
+/*vertical navbar, 1x4 gallery*/
 @media screen and (max-width: 480px) {
+	.navbar {
+		width: 50%;
+		min-width: 125px;
+	}
+	a {
+		display: block;
+		width: 100%;
+		padding: 1%;
+	}
 	.gallery img {
-		display: inline-block;
-		margin: 3% 1%;
+		width: 100%;
+		max-width: 175px;
 	}
 }
